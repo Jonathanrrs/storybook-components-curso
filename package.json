@@ -34,9 +34,11 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
-    "build": "",
+    "build": "yarn clean && tsc && yarn copy-files",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/"
   },
   "eslintConfig": {
     "extends": [
@@ -75,6 +77,8 @@
     "@storybook/node-logger": "^6.4.9",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.9",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
     "webpack": "^5.65.0"
   }
 }
