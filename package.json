@@ -9,6 +9,10 @@
     "url": "https://github.com/Jonathanrrs/storybook-components-curso",
     "type": "git"
   },
+  "peerDependencies": {
+    "react": ">=16",
+    "typescript": ">=4.0.0"
+  },
   "release": {
     "branches": [
       "master"
@@ -79,6 +83,15 @@
     "@storybook/react": "^6.4.9",
     "copyfiles": "^2.4.1",
     "rimraf": "^3.0.2",
+    "semantic-release": "^18.0.1",
     "webpack": "^5.65.0"
-  }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }
